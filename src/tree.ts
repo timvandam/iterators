@@ -25,9 +25,35 @@ export function* inorder<T = unknown>(tree: T[], i = 0): Generator<T, void, void
 	if (hasRightChild(i, tree)) yield* inorder(tree, getRightChild(i))
 }
 
-export function* breadthfirst<T = unknown>(tree: T[], i = 0): Generator<T, void, void> {
-	for (const [node, i] of withIndex(tree[Symbol.iterator]())) {
-		if (!hasNode(i, tree)) continue
+export function* reverseInorder<T = unknown>(tree: T[], i = 0): Generator<T, void, void> {
+	if (hasRightChild(i, tree)) yield* reverseInorder(tree, getRightChild(i))
+	if (hasNode(i, tree)) yield tree[i]
+	if (hasLeftChild(i, tree)) yield* reverseInorder(tree, getLeftChild(i))
+}
+
+export function* breadthFirst<T = unknown>(tree: T[], i = 0): Generator<T, void, void> {
+	for (const [node, index] of withIndex(tree.slice(i)[Symbol.iterator]())) {
+		if (!hasNode(index, tree)) continue
 		yield node
 	}
+}
+
+/**
+ * Just like breadth-first, but provides rows at a time
+ */
+export function* rows<T = unknown>(tree: T[], i = 0): Generator<T[], void, void> {
+	let nodesPerRow = 1
+	let lastOfRow = 0
+	let row: T[] = []
+	for (const [node, index] of withIndex(tree.slice(i)[Symbol.iterator]())) {
+		if (!hasNode(index, tree)) continue
+		row.push(node)
+		if (index === lastOfRow) {
+			yield row
+			row = []
+			nodesPerRow *= 2
+			lastOfRow += nodesPerRow
+		}
+	}
+	if (row.length) yield row
 }

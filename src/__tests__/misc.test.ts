@@ -2,11 +2,10 @@ import { misc } from '../index'
 
 describe('fibonacci works', () => {
 	it('first 20 values work', () => {
-		let i = 0
 		const result: number[] = []
-		for (const num of misc.fibonacci()) {
+		for (const [num, i] of misc.withIndex(misc.fibonacci())) {
+			if (i === 20) break
 			result.push(num)
-			if (++i === 20) break
 		}
 		expect(result).toEqual([0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181])
 	})

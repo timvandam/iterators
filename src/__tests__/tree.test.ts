@@ -29,10 +29,26 @@ describe('inorder works', () => {
 	})
 })
 
-describe('breadthfirst works', () => {
+describe('reverse inorder works', () => {
 	it('iterates properly', () => {
 		const result = []
-		for (const num of tree.breadthfirst(nums)) result.push(num)
+		for (const num of tree.reverseInorder(nums)) result.push(num)
+		expect(result).toEqual([10, 56, 1, 7, 4, 1])
+	})
+})
+
+describe('breadthFirst works', () => {
+	it('iterates properly', () => {
+		const result = []
+		for (const num of tree.breadthFirst(nums)) result.push(num)
 		expect(result).toEqual(nums.filter((x) => (x ?? undefined) !== undefined))
+	})
+})
+
+describe('rows works', () => {
+	it('iterates properly', () => {
+		const result = []
+		for (const num of tree.rows(nums)) result.push(num)
+		expect(result).toEqual([[1], [4, 56], [1, 7, 10]])
 	})
 })
