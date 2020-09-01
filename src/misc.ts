@@ -24,3 +24,10 @@ export function* withIndex<T = unknown>(iterator: Iterator<T>): Generator<[T, nu
 		i++
 	}
 }
+
+/**
+ * Range [i, j) with step k
+ */
+export function* range(start: number, stop: number, step = 1): Generator<number, void, void> {
+	for (let i = start; i < stop; i += step) yield i
+}

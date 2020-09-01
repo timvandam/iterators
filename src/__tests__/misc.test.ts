@@ -25,3 +25,9 @@ describe('withIndex works', () => {
 		])
 	})
 })
+
+describe('range works', () => {
+	it('from -5 to 10 with step 3', () => {
+		expect([...misc.range(-5, 10, 3)]).toEqual([-5, -2, 1, 4, 7])
+	})
+})

@@ -23,16 +23,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="faa651f2-ea41-4ef6-888b-b4a342241238" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/array.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/array.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/__tests__/misc.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/misc.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__tests__/tree.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/__tests__/tree.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/array.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/array.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tree.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/tree.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/misc.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/misc.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,13 +70,14 @@
     <property name="run.prettier.on.save" value="true" />
     <property name="settings.editor.selected.configurable" value="settings.javascript.prettier" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
-  <component name="RunManager" selected="Jest.All Tests">
+  <component name="RunManager" selected="Jest.range works">
     <configuration name="All Tests" type="JavaScriptTestRunnerJest" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -120,6 +114,19 @@
       </test-names>
       <method v="2" />
     </configuration>
+    <configuration name="range works" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
+      <node-interpreter value="project" />
+      <node-options value="" />
+      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
+      <working-dir value="$PROJECT_DIR$" />
+      <envs />
+      <scope-kind value="SUITE" />
+      <test-file value="$PROJECT_DIR$/src/__tests__/misc.test.ts" />
+      <test-names>
+        <test-name value="range works" />
+      </test-names>
+      <method v="2" />
+    </configuration>
     <configuration name="reverse inorder works" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
       <node-interpreter value="project" />
       <node-options value="" />
@@ -146,31 +153,21 @@
       </test-names>
       <method v="2" />
     </configuration>
-    <configuration name="tree.test.ts" type="JavaScriptTestRunnerJest" temporary="true" nameIsGenerated="true">
-      <node-interpreter value="project" />
-      <node-options value="" />
-      <jest-package value="$PROJECT_DIR$/node_modules/jest" />
-      <working-dir value="$PROJECT_DIR$" />
-      <envs />
-      <scope-kind value="TEST_FILE" />
-      <test-file value="$PROJECT_DIR$/src/__tests__/tree.test.ts" />
-      <method v="2" />
-    </configuration>
     <list>
       <item itemvalue="Jest.All Tests" />
-      <item itemvalue="Jest.tree.test.ts" />
       <item itemvalue="Jest.reverse inorder works" />
       <item itemvalue="Jest.nested works" />
       <item itemvalue="Jest.fibonacci works" />
       <item itemvalue="Jest.rows works" />
+      <item itemvalue="Jest.range works" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Jest.range works" />
         <item itemvalue="Jest.rows works" />
         <item itemvalue="Jest.fibonacci works" />
         <item itemvalue="Jest.nested works" />
         <item itemvalue="Jest.reverse inorder works" />
-        <item itemvalue="Jest.tree.test.ts" />
       </list>
     </recent_temporary>
   </component>
@@ -184,7 +181,9 @@
       <updated>1598288899582</updated>
       <workItem from="1598288900651" duration="784000" />
       <workItem from="1598289696082" duration="8080000" />
-      <workItem from="1598351294248" duration="4109000" />
+      <workItem from="1598351294248" duration="4985000" />
+      <workItem from="1598361822807" duration="603000" />
+      <workItem from="1598949646698" duration="133000" />
     </task>
     <servers />
   </component>
@@ -216,25 +215,29 @@
       <screen x="1920" y="0" width="1600" height="900" />
     </state>
     <state x="2020" y="100" width="1400" height="700" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.27.1920.1053/1920.0.1600.900@1920.0.1600.900" timestamp="1598292684179" />
-    <state width="1872" height="273" key="GridCell.Tab.0.bottom" timestamp="1598354116185">
+    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl" timestamp="1598359844182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1872" height="273" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598354116185" />
+    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598359844182" />
+    <state width="1872" height="273" key="GridCell.Tab.0.bottom" timestamp="1598359845411">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state width="1872" height="273" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598359845411" />
     <state width="1552" height="223" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1600.900@1920.0.1600.900" timestamp="1598299555408" />
-    <state width="1872" height="273" key="GridCell.Tab.0.center" timestamp="1598354116185">
+    <state width="1872" height="273" key="GridCell.Tab.0.center" timestamp="1598359845411">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1872" height="273" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598354116185" />
+    <state width="1872" height="273" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598359845411" />
     <state width="1552" height="223" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1600.900@1920.0.1600.900" timestamp="1598299555408" />
-    <state width="1872" height="273" key="GridCell.Tab.0.left" timestamp="1598354116185">
+    <state width="1872" height="273" key="GridCell.Tab.0.left" timestamp="1598359845411">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1872" height="273" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598354116185" />
+    <state width="1872" height="273" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598359845411" />
     <state width="1552" height="223" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1600.900@1920.0.1600.900" timestamp="1598299555408" />
-    <state width="1872" height="273" key="GridCell.Tab.0.right" timestamp="1598354116185">
+    <state width="1872" height="273" key="GridCell.Tab.0.right" timestamp="1598359845411">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1872" height="273" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598354116185" />
+    <state width="1872" height="273" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1600.900@0.27.1920.1053" timestamp="1598359845411" />
     <state width="1552" height="223" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1600.900@1920.0.1600.900" timestamp="1598299555408" />
     <state x="2524" y="132" width="381" height="642" key="RollbackChangesDialog" timestamp="1598297720500">
       <screen x="1920" y="0" width="1600" height="900" />
