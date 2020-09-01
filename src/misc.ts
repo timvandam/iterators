@@ -26,8 +26,24 @@ export function* withIndex<T = unknown>(iterator: Iterator<T>): Generator<[T, nu
 }
 
 /**
+ * Range [0, j) with step 1
+ */
+export function range(stop: number): Generator<number, void, void>
+
+/**
+ * Range [i, j) with step 1
+ */
+export function range(start: number, stop: number): Generator<number, void, void>
+
+/**
  * Range [i, j) with step k
  */
-export function* range(start: number, stop: number, step = 1): Generator<number, void, void> {
+export function range(start: number, stop: number, step: number): Generator<number, void, void>
+
+export function* range(start: number, stop?: number, step = 1): Generator<number, void, void> {
+	if (stop === undefined) {
+		stop = start
+		start = 0
+	}
 	for (let i = start; i < stop; i += step) yield i
 }
